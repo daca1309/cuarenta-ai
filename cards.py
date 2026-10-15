@@ -1,3 +1,4 @@
+import random
 values = (1, 2, 3, 4, 5, 6, 7, "J", "Q", "K")
 
 def create_deck():
@@ -8,7 +9,7 @@ def create_deck():
             card = (value, suit)
             deck.append(card)
     return deck
-#print(create_deck())
+print(create_deck())
 
 def get_value(card):
     return card[0]
@@ -24,12 +25,10 @@ def same_card(card1, card2):
         return True
     return False
 
-def validate_deck(deck):
-    pass
-
 def shuffle_deck(deck):
-    pass
-
+    baraja=deck.copy()
+    random.shuffle(baraja)
+    return baraja
 
 def deal_cards(deck, quantity):
     pass
